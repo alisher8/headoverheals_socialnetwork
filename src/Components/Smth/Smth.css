@@ -1,0 +1,69 @@
+.frame-for-social{
+    margin-top: 10px;
+    padding-left: 250px;
+}
+.social{
+    display: flex;
+    width: 100%;
+}
+.buttonForChangeMainOfSocial{
+
+ flex-direction: column;
+    display: flex;
+    background-color: transparent;
+    height: 674px;
+}
+
+h3{
+    margin-top: 0;
+    font-size: 15px;
+    padding: 0;
+}
+
+.imena {
+    margin-left: 50px;
+    font-size: 30px;
+    margin-bottom: 0;
+}
+
+.MainOfSocial{
+    width: 100%;
+    height: 674px;
+    overflow: scroll;
+}
+
+.changeSocialButton1{
+    border-radius: 40px 0 0 0;
+    cursor: pointer;
+    width: 8.11rem;
+    height: 337px;
+    padding: .77rem 0;
+    background-color: #010c3f;
+    text-align: center;
+    font-size: .833rem;
+    transition: background-color .25s;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-weight: 500;
+}
+
+.changeSocialButton2{
+    border-radius: 0 0 0 40px;
+    cursor: pointer;
+    width: 8.11rem;
+    height: 293px;
+    padding: .77rem 0;
+    background-color: #010c3f;
+    text-align: center;
+    font-size: .833rem;
+    transition: background-color .25s;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-weight: 500;
+}
+
+.changeSocialButton:hover{
+    background-color: rgba(108, 65, 233, .7);
+}

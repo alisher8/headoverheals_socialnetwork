@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.music-container {
+  background-color: rgba(0, 0, 0, 0.65);
+  border-radius: 45px;
+  box-shadow: rgba(127, 46, 240, 0.4) 5px 5px, rgba(172, 46, 240, 0.3) 10px 10px, rgba(227, 46, 240, 0.2) 15px 15px, rgba(234, 46, 240, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+  display: flex;
+  padding: 20px 30px;
+  height: 80px;
+  position: relative;
+}
+
+.img-container {
+  position: relative;
+  width: 110px;
+}
+
+.img-container::after {
+  content: '';
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  transform: translate(-50%, 50%);
+}
+
+.img-container img {
+  border-radius: 50%;
+  object-fit: cover;
+  height: 110px;
+  width: inherit;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  animation: rotate 3s linear infinite;
+
+  animation-play-state: paused;
+}
+
+.music-container.play .img-container img {
+  animation-play-state: running;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
+  z-index: 1;
+}
+
+.action-btn {
+  background-color: rgba(0, 0, 0, 0);
+  border: 0;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 10px;
+  margin: 0 20px;
+}
+
+.action-btn.action-btn-big {
+  color: #cdc2d0;
+  font-size: 30px;
+}
+
+.action-btn:focus {
+  outline: 0;
+}
+
+.music-info {
+  background-color: rgba(0, 0, 0, 0.65);
+  border-radius: 35px 35px 0 0;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  width: calc(100% - 40px);
+  padding: 10px 10px 10px 150px;
+  opacity: 0;
+  transform: translateY(0%);
+  transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+  z-index: 0;
+}
+
+.music-container.play .music-info {
+  opacity: 1;
+  transform: translateY(-100%);
+}
+
+.music-info h4 {
+  margin: 0;
+}
+
+.progress-container {
+  background: white;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 0;
+  height: 4px;
+  width: 100%;
+}
+
+.progress {
+  background-color: #6a05e7;
+  border-radius: 5px;
+  height: 100%;
+  width: 50%;
+  transition: width 0.1s linear;
+}
